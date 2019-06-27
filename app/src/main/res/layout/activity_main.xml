@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#818181"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context="com.Dota2048.Activity.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/GameMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/HardGame"
+                    android:textColor="#7f000000"
+                    android:textSize="78sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <me.grantland.widget.AutofitTextView
+                            android:id="@+id/maxscore"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="19sp" />
+
+                        <me.grantland.widget.AutofitTextView
+                            android:id="@+id/tvScore"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <me.grantland.widget.AutofitTextView
+                            android:id="@+id/maxlevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="20sp" />
+
+                        <me.grantland.widget.AutofitTextView
+                            android:id="@+id/level"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <me.grantland.widget.AutofitLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:singleLine="true"
+                        style="@android:style/Holo.Light.ButtonBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_style"
+                        android:gravity="center"
+                        android:text="@string/Clear"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+                </me.grantland.widget.AutofitLayout>
+
+                <me.grantland.widget.AutofitLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:singleLine="true"
+                        android:id="@+id/bt_cx"
+                        style="@android:style/Holo.Light.ButtonBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_style"
+                        android:gravity="center"
+                        android:text="@string/Re"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+                </me.grantland.widget.AutofitLayout>
+                <me.grantland.widget.AutofitLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/help"
+                        android:singleLine="true"
+                        style="@android:style/Holo.Light.ButtonBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_style"
+                        android:gravity="center"
+                        android:text="@string/Help"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+                </me.grantland.widget.AutofitLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    <com.Dota2048.Activity.GameView
+        android:id="@+id/gameView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/Skill"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#646464"
+                android:padding="2dp"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical">
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/SkillName"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:sizeToFit="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/US"
+                android:layout_width="80dp"
+                android:layout_height="43dp"
+                android:background="#818181"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bt_1" />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/Price"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/gold_1" />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/Gold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout></FrameLayout></LinearLayout>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="scoreColor">#ffe75e</color>
+    <color name="levelColor">#5fafff</color>
+    <color name="textColorOfVs">#E71C8E</color>
+    <color name="introColorOfDe">#1d2e9e</color>
+    <color name="SkinColor">#FFD7BA</color>
+    <color name="DarkGreen">#144E33</color>
+    <color name="DeerHair">#E20000</color>
+    <color name="paColor">#152D34</color>
+    <color name="WeColor">#00A29E</color>
+    <color name="LnColor">#C54400</color>
+    <color name="DeColor">#B7DA00</color>
+    <color name="vsColor">#4f00e3</color>
+</resources>
